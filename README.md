@@ -1,3 +1,5 @@
+original OpenTTD repository: https://github.com/OpenTTD/OpenTTD
+
 # openttd-docker
 Basic `Dockerfile` to start openttd from pre-built libraries
 
