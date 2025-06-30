@@ -20,12 +20,12 @@ RUN apt-get install -y zip unzip
 USER openttd
 
 FROM base-download as base-download-game
-RUN wget -O openttd.tar.xz https://cdn.openttd.org/openttd-releases/13.1/openttd-13.1-linux-generic-amd64.tar.xz
+RUN wget -O openttd.tar.xz https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-linux-generic-amd64.tar.xz
 
 FROM base-xz as base-xz-game
 COPY --from=base-download-game /openttd/openttd.tar.xz openttd.tar.xz
 RUN tar -xvf openttd.tar.xz
-RUN mv openttd-13.1-linux-generic-amd64 openttd
+RUN mv openttd-14.1-linux-generic-amd64 openttd
 
 FROM base-download as base-download-gfx
 RUN wget https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip
